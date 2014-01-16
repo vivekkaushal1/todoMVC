@@ -3,13 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>AngularJS TodoMVC</title>
+		<title>AngularJS • TodoMVC</title>
 		<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
-		<style>[ng-cloak] { display: none;}</style>
+		<style>[ng-cloak] { display: none; }</style>
 	</head>
-
 	<body ng-app="todomvc">
-		<ng-view/>
+		<ng-view />
 
 		<script type="text/ng-template" id="todomvc-index.html">
 			<section id="todoapp" ng-controller="TodoCtrl">
@@ -30,19 +29,18 @@
 								<button class="destroy" ng-click="removeTodo(todo)"></button>
 							</div>
 							<form ng-submit="doneEditing(todo)">
-								<input class="edit" ng-trim="false" ng-model="todo.title" todo-esxape="revertEditing(todo)" ng-blur="doneEditing(todo)" todo-focus="todo == editedTodo">
+								<input class="edit" ng-trim="false" ng-model="todo.title" todo-escape="revertEditing(todo)" ng-blur="doneEditing(todo)" todo-focus="todo == editedTodo">
 							</form>
 						</li>
 					</ul>
 				</section>
-
 				<footer id="footer" ng-show="todos.length" ng-cloak>
-					<span id="todo-count"><strong>{{remainingCount}}<strong>
-						<ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left'}"><ng-pluralize>
+					<span id="todo-count"><strong>{{remainingCount}}</strong>
+						<ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
 					</span>
 					<ul id="filters">
 						<li>
-							<a ng-class="{selected: status == ''}" href="#/">All</a>
+							<a ng-class="{selected: status == ''} " href="#/">All</a>
 						</li>
 						<li>
 							<a ng-class="{selected: status == 'active'}" href="#/active">Active</a>
@@ -54,9 +52,6 @@
 					<button id="clear-completed" ng-click="clearCompletedTodos()" ng-show="completedCount">Clear completed ({{completedCount}})</button>
 				</footer>
 			</section>
-			<footer id="info">
-				<p>Double-click to edit a todo</p>
-			</footer>
 		</script>
 		<script src="bower_components/todomvc-common/base.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
